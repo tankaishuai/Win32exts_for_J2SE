@@ -238,6 +238,56 @@
         public native void shared_destroy(
 						int pBuf,
 						int hHandle);
+						
+	public native Object set_seh_handler(
+						Object pHandler);
+
+		public native int create_ax_object(
+						String strAppId, 
+						int hWnd);
+
+		public native int create_ax_object_v2(
+						int pDisp, 
+						int hWnd);
+
+		public native int query_ax_object(
+						String bstrName, 
+						String bstrIID);
+
+		public native String select_ax_object(
+						String bstrName);
+
+		public native void delete_ax_object(
+						String bstrName);
+
+		public native int pop_thread_id();
+
+		public native void copy_memory(
+						int lDst, 
+						int lSrc, 
+						int lSize);
+
+		public native int realloc(
+						int pBuf, 
+						int size, 
+						int bAllowExec);
+
+		public native int push_raw_variant(
+						int vt, 
+						int lLowPart, 
+						int lHighPart);
+
+		public native int exec(
+						String bstrExec, 
+						int lType);
+
+		public native int co_find_sym(
+						int pDisp, 
+						String bstrMember);
+
+		public native int ref_sym( 
+						String bstrFunc,
+						String bstrSignature);
         
         private int __cpp_object = 0;
         
