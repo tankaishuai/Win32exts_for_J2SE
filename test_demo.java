@@ -51,6 +51,13 @@
         		win32exts.push_value(233);
         		win32exts.func_call("EnumWindows");
         		
-        		
+        		// 调用COM，打开计算器
+        		int wsh = win32exts.co_create_object("Wscript.Shell");
+        		System.out.println("wsh = " + String.valueOf(wsh));
+        		win32exts.co_push_start();
+        		win32exts.push_bstr("calc");
+        		win32exts.push_value(1);
+        		win32exts.co_invoke(wsh, "Run");
+        		win32exts.co_release(wsh);
         }
     };
