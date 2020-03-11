@@ -294,7 +294,7 @@
         static {
         try
 				{
-					System.loadLibrary("win32exts_dll");
+					System.loadLibrary("win32exts");
 				}
 				catch(Exception ex){
 					JOptionPane.showMessageDialog(null,"º”‘ÿwin32exts ß∞‹!!!", "º”‘ÿwin32exts ß∞‹", JOptionPane.PLAIN_MESSAGE);
